@@ -2,27 +2,27 @@
   "phases": {
     "2023-10-04": {
       "phrase": "An apple a day, keeps the cancer away.",
-      "requiredFeedbacks": 1
+      "requiredFeedbacks": 3
     },
     "2023-10-05": {
       "phrase": "Standing too close to the microwave can cause cancer.",
-      "requiredFeedbacks": 1
+      "requiredFeedbacks": 3
     },
     "2023-10-06": {
       "phrase": "Cracking your knuckles leads to arthritis.",
-      "requiredFeedbacks": 1
+      "requiredFeedbacks": 3
     },
     "2023-10-07": {
       "phrase": "Autism disorder is a result of childhood vaccinations.",
-      "requiredFeedbacks": 1
+      "requiredFeedbacks": 3
     },
     "2023-10-08": {
       "phrase": "Suger substitudes can cause cancer.",
-      "requiredFeedbacks": 1
+      "requiredFeedbacks": 3
     },
     "2023-10-09": {
       "phrase": "Cracking your knuckles leads to arthritis.",
-      "requiredFeedbacks": 1
+      "requiredFeedbacks": 3
     },
     "2023-10-10": {
       "phrase": "An apple a day, keeps the cancer away.",

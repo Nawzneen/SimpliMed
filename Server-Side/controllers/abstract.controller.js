@@ -101,7 +101,7 @@ exports.submitFeedback = async (req, res) => {
 
 ////
 async function requestResults(req) {
-  console.log("the request in server is:", req.body);
+  console.log("the request to server is:", req.body);
 
   const advancedPrompt =
     "Simplify the following abstract of a medical article while retaining the main idea. The target audience is individuals with an undergraduate university degree. Use language that is understandable for this audience while keeping some technical terms that are not overly complicated. Try not to summerize it. Ensure that the main idea of the original text is preserved without adding any additional information. this is the abstract:";
@@ -128,10 +128,8 @@ async function requestResults(req) {
     req.body.originalAbstract,
     elementaryPrompt
   );
-  // const testResult = await fetchResults(req.body.originalAbstract, testPrompt);
   const titleResult = await fetchResults(req.body.originalTitle, titlePrompt);
 
-  // res.status(200).send({ message: "Done" });
   return {
     advancedAbstract: advancedResult.message,
     elementaryAbstract: elementaryResult.message,

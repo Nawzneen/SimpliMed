@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>User List</title>
+  </head>
+  <body>
+    <h1>User List</h1>
+    <button id="fetchUsersButton">Fetch Users</button>
+    <div id="userList">
+      <!-- User data will be displayed here -->
+    </div>
+
+    <script>
+      document
+        .getElementById("fetchUsersButton")
+        .addEventListener("click", async function () {
+          console.log("am i working");
+          const options = {
+            method: "POST",
+            headers: {
+              // "Content-Type": "application/json",
+              // Authorization: "JWT " + accessToken,
+            },
+          };
+          const response = await fetch(
+            `http://localhost:8080/report/users`,
+            options
+          );
+          console.log("response is", response);
+
+          const data = await response.json();
+          console.log("data is", data);
+          const userListDiv = document.getElementById("userList");
+          userListDiv.innerHTML = "";
+
+          data.users.forEach((user) => {
+            const userDiv = document.createElement("div");
+            userDiv.innerHTML = `Username: ${user.username}, id: ${user._id}, created: ${user.created}`;
+            userListDiv.appendChild(userDiv);
+          });
+        });
+    </script>
+  </body>
+</html>
